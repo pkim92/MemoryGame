@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' type="text/css" href='style.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script defer type="text/javascript" src="functions.js"></script>
+</head>
+{{#if mainPage}}
+<body onload="initialize()">
+    <h1>Memory Game - Peter Kim</h1>
+    {{{ body }}}
+</body>
+{{/if}}
+{{#if summary}}
+<body>
+    <h1>Memory Game - Peter Kim</h1>
+    {{{ body }}}
+</body>
+{{/if}}
+{{#if scoreboard}}
+<body>
+    <h1>Memory Game - Peter Kim</h1>
+    {{{ body }}}
+</body>
+{{/if}}
+</html>

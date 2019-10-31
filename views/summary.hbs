@@ -1,0 +1,22 @@
+<br>
+<br>
+<div>
+    <h1>You Scored {{score}} Point(s)!</h1>
+</div>
+
+<form id="summaryForm" action="/scoreboard" method="post">
+    <div>
+        <p>Would you like to submit your results to the scoreboard?</p>
+        <p>Please fill out your name, and click "Submit"!</p>
+    </div>
+    <div id="userInputHolder">
+        <input id="userName" type="text" name="userName" placeholder="Your Name!" size="35">
+        <input id="submitName" type="submit" value="Submit">
+        <input id="summaryScore" type="hidden" name="summaryScore" value= {{ score }}>
+    </div>
+</form>
+
+<div id="retryDiv">
+    <p>You can retry the game by clicking this button below:</p>
+    <button onclick="retry()">Retry</button>
+</div>

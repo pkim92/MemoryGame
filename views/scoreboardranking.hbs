@@ -1,0 +1,22 @@
+<div>
+    <h2>Scoreboard: TOP 5 Scores</h2>
+    <div id="tableDiv">
+        <table id="scoreboardTable" align="center">
+            <tr>
+                <th>User Name</th>
+                <th>Score</th>
+            </tr>
+            {{#each user}}
+            <tr>
+                <th>{{this.name}}</th>
+                <th>{{this.score}}</th>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+    <div id="retryDiv">
+    <p>You can retry the game by clicking this button below:</p>
+    <button onclick="retry()">Retry</button>
+</div>
+</div>

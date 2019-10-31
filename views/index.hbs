@@ -1,0 +1,18 @@
+<div id="root"></div>
+<div id="info">
+    <div>
+        <p id="score">Score: 0</p>
+    </div>
+    <div>
+        <p id="trial">Trial: 0</p>
+    </div>
+    <div>
+        <p id="status"></p>
+    </div>
+    <form id="form" action="/summary" method="post" onsubmit="return window.terminate(event);">
+        <div id="buttonDiv">
+            <input id="terminate" type="submit" value="Terminate">
+        </div>
+        <input type="hidden" id="scoreSubmit" name="scoreSubmit">
+    </form>
+</div>

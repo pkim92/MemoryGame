@@ -1,0 +1,88 @@
+h1, h2, p, button, input, th {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+#buttonDiv {
+    text-align: center;
+}
+#userInputHolder {
+    text-align: center;
+}
+#retryDiv {
+    padding-top: 4em;
+    text-align: center;
+}
+.cell {
+    height: 50px;
+    width:  50px;
+    background-color: transparent;
+    margin: 2px;
+}
+
+.cell-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+table, th, td {
+    border: 0px solid black;
+  }
+
+.cell-inner.flip {
+    transform: rotateX(180deg);
+}
+
+.cell-inner.transition {
+    transform: rotateY(180deg);
+}
+.cell-front, .cell-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cell-front {
+    background-color: yellowgreen;
+    color: black;
+}
+
+.cell-back {
+    background-color: purple;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.cell-back.correct {
+    background-color: green;
+}
+
+.cell-back.incorrect {
+    background-color: red;
+}
+#matrix {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 4em;
+}
+
+#matrix.rotate {
+    animation: spin 0.6s linear;
+    transform: rotate(90deg);
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(90deg);
+    }
+}
